@@ -35,13 +35,25 @@ public class Pitcher {
   * @return String   a String that says if they threw a bad pitch or great pitch.
   */
   public String getPitch(){
-    String vowels = "aeiou";
     String result = "Oof! " + this.name + " throws a bad pitch";
-    String letter = this.name.substring(this.pitchCounter%this.name.length(),this.pitchCounter%this.name.length()+1).toLowerCase();
-    if(vowels.indexOf(letter) >= 0){
+    if(???){ // <---------------------------------------------- FIX ME call the isVowel method, send in name and pitchNumber as args
       result = this.name + " throws a GREAT pitch!";
     }
     this.pitchCounter++;
     return result;
+  }
+
+  /**
+  * The static isVowel method takes a String word and an int num.
+  * If the letter at index location num is a vowel, returns true
+  * otherwise return false.
+  * @param String     a String word that might contain vowels
+  * @param int        an int num that is the index location to look at
+  * @return boolean   If the letter at index location num is a vowel, returns true. Otherwise, false.
+  */
+  private static boolean isVowel(String word, int num){
+    String vowels = "aeiou";
+    String letter = word.substring(num % word.length(),num % word.length() + 1);
+    return vowels.indexOf(letter.toLowerCase()) >= 0;
   }
 }
