@@ -10,6 +10,7 @@ public class HomeRunDerby {
 
   private Pitcher pitcher;
   private Batter batter;
+  private int pitchNumber;
 
   /* Constructor(s) */
 
@@ -28,12 +29,21 @@ public class HomeRunDerby {
 
     this.pitcher = new Pitcher(_pitcher.getName());
     this.batter = new Batter(_batter.getName());
+    this.pitchNumber = 0;
     
   }
   
 
   /* Methods */
-
+  
+  /** void nextPitch()
+  * increments pitchNumber & moves the pitchers and batters to the next pitch/swing.
+  */
+  public void nextPitch(){
+    pitchNumber++;
+    pitcher.nextPitch();
+    batter.nextSwing();
+  }
 
 
 
@@ -41,3 +51,4 @@ public class HomeRunDerby {
 
 
 }
+
