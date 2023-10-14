@@ -44,11 +44,25 @@ public class HomeRunDerby {
     pitcher.nextPitch();
     batter.nextSwing();
   }
-
-
-
-
-
-
+  
+  /** string getResults()
+  gets a swing and a pitch then returns the resulting hit based off those values
+  */
+  public String getResults(){
+    String pitch = this.pitcher.getPitch();
+    String swing = this.batter.getSwing();
+    if (this.pitcher.isGoodPitch() && this.batter.isGoodSwing()){
+      return pitch + "\n" + swing + "\n" + "It's a hit\n";
+    }
+    if (this.pitcher.isGoodPitch() && !this.batter.isGoodSwing()){
+      return pitch + "\n" + swing + "\n" + "It's a strike\n";
+    }
+    if (!this.pitcher.isGoodPitch() && this.batter.isGoodSwing()){
+      return pitch + "\n" + swing + "\n" + "It's a homerun\n";
+    }
+    if (!this.pitcher.isGoodPitch() && !this.batter.isGoodSwing()){
+      return pitch + "\n" + swing + "\n" + "It's a foul ball\n";
+    }
+  }
+  
 }
-
