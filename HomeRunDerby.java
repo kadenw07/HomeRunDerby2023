@@ -50,18 +50,18 @@ public class HomeRunDerby {
   */
 public string getResults(){
   String pitch = this.pitcher.getPitch();
-  String swing += this.batter.getSwing();
-  if (pitch(pitch.length() -1) == !) and (swing(swing.length() -1) == !){
-    return pitch + /n + swing + /n + "It's a hit";
+  String swing = this.batter.getSwing();
+  if (this.pitcher.isGoodPitch() && this.batter.isGoodSwing()){
+    return pitch + "\n" + swing + "\n" + "It's a hit\n";
   }
-  if (pitch(pitch.length() -1) == !) and (swing(swing.length() -1) != !){
-    return pitch + /n + swing + /n + "It's a strike";
+  if (this.pitcher.isGoodPitch() && !this.batter.isGoodSwing()){
+    return pitch + "\n" + swing + "\n" + "It's a strike\n";
   }
-  if (pitch(pitch.length() -1) != !) and (swing(swing.length() -1) == !){
-    return pitch + /n + swing + /n + "It's a homerun";
+  if (!this.pitcher.isGoodPitch() && this.batter.isGoodSwing()){
+    return pitch + "\n" + swing + "\n" + "It's a homerun\n";
   }
-  if (pitch(pitch.length() -1) != !) and (swing(swing.length() -1) == !){
-    return pitch + /n + swing + /n + "It's a foul ball";
+  if (!this.pitcher.isGoodPitch() && !this.batter.isGoodSwing()){
+    return pitch + "\n" + swing + "\n" + "It's a foul ball\n";
   }
 
 
