@@ -22,6 +22,13 @@ public class Pitcher {
     this.pitchCounter = 0;
   }
 
+  /**
+  *  String getName() gets the name of the pitcher
+  *  @return String name of pitcher
+  */
+  public String getName(){
+    return name;
+  }
   
   /**
   * The getPitch method looks at the player's name and the
