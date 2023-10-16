@@ -54,4 +54,12 @@ public class Batter {
     String letter = word.substring(num % word.length(),num % word.length() + 1);
     return vowels.indexOf(letter.toLowerCase()) >= 0;
   }
+
+  /**
+  * The getName method returns the name of the batter as a String.
+  * @return String   The name of the batter.
+  */
+  public String getName(){
+    return name;
+  }
 }
