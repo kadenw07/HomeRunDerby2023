@@ -1,6 +1,6 @@
 /** 
  * represents a home run derby that is an 
- * event where a batter hits a ball thrown 
+ * event where a batter hits a ball thrown     
  * by the pitcher and tries to hit a home run.
  */
 
