@@ -62,4 +62,12 @@ public class Batter {
   public String getName(){
     return name;
   }
+  /**
+  * The nextPitch method has the pitcher pitch the next ball and the batter swing
+  */
+  public void nextPitch(){
+    this.pitchCounter++;
+    batter.nextSwing();
+    pitcher.nextPitch();
+  }
 }
