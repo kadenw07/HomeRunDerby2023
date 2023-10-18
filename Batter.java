@@ -62,4 +62,10 @@ public class Batter {
   public String getName(){
     return name;
   }
+  public void nexPitch(){
+    this.pitchCounter++'
+    pitcher.nextPitch();
+    batter.nextSwing();
+
+  }
 }
