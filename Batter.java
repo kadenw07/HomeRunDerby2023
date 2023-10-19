@@ -63,11 +63,11 @@ public class Batter {
     return name;
   }
   /**
-  * The nextPitch method has the pitcher pitch the next ball and the batter swing
+  * The nextPitch method incraeses the pitch counter
+  
   */
   public void nextPitch(){
     this.pitchCounter++;
-    batter.nextSwing();
-    pitcher.nextPitch();
+
   }
 }
